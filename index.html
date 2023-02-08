@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Calculator app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navigation">
+        <div class="title-div">
+          <h2>calc</h2>
+        </div>
+        <div class="theme-div">
+          <div></div>
+          <div class="switch-num">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+          </div>
+          <div class="theme-text">
+            <p>THEME</p>
+          </div>
+          <div class="switch-icon">
+            <input
+              type="range"
+              min="1"
+              max="3"
+              value="1"
+              class="slider"
+              id="myRange"
+            />
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="display-section">
+        <div class="input-div">
+          <p class="display-text"></p>
+          <input type="text" id="input-number" name="input-display" readonly />
+        </div>
+      </section>
+      <section class="numpad-section">
+        <div class="numpad-div">
+          <button class="one-color seven">7</button>
+          <button class="one-color eight">8</button>
+          <button class="one-color nine">9</button>
+          <button class="two-color del">DEL</button>
+          <button class="one-color four">4</button>
+          <button class="one-color five">5</button>
+          <button class="one-color six">6</button>
+          <button class="one-color add">+</button>
+          <button class="one-color one">1</button>
+          <button class="one-color two">2</button>
+          <button class="one-color three">3</button>
+          <button class="one-color subtract">-</button>
+          <button class="one-color dot">.</button>
+          <button class="one-color zero">0</button>
+          <button class="one-color divide">/</button>
+          <button class="one-color multiply">x</button>
+          <button class="two-color span-btn reset">RESET</button>
+          <button class="third-color span-btn result">=</button>
+        </div>
+      </section>
+    </main>
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+    <script src="script.js"></script>
+  </body>
+</html>
