@@ -254,17 +254,24 @@ document.querySelector(".dot").addEventListener("click", dot);
 
 // RESULT
 function resultFunction() {
-  if (operator === "/" && secondNumber === "0") {
-    displayText = "Error";
-    displayTextEl.innerText = displayText;
+  if (isResult) {
     return;
   }
+  // if (operator === "/" && secondNumber === "0") {
+  //   displayText = "Error";
+  //   displayTextEl.innerText = displayText;
+  //   return;
+  // }
   // console.log("FirstNumber" + firstNumber);
   // console.log("Second Number" + secondNumber);
   firstNumber = parseFloat(firstNumber);
   secondNumber = parseFloat(secondNumber);
   result = eval(firstNumber + " " + operator + " " + secondNumber);
-  display.value = result;
+  if (result == "Infinity") {
+    display.value = "Can't divide by 0";
+  } else {
+    display.value = result;
+  }
   firstNumber = result;
   secondNumber = "";
   // console.log(result);
