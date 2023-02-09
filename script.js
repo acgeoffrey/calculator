@@ -352,3 +352,136 @@ window.onkeydown = function (event) {
 };
 
 //THEMES
+const keyBackgroundTwo = document.querySelector(".two-color");
+const keyBackgroundOne = document.getElementsByClassName("one-color");
+const keyBackgroundThree = document.querySelector(".third-color");
+
+const sliderEl = document.getElementById("myRange");
+if (sliderEl.value === "1") {
+  document.body.style.color = "white";
+  document.documentElement.style.backgroundColor = "hsl(222, 26%, 31%)";
+  document.querySelector(".switch-icon").style.backgroundColor =
+    "hsl(223, 31%, 20%)";
+  sliderEl.style.setProperty("--sliderColor", "hsl(6, 100%, 50%)");
+  document.querySelector(".input-div").style.backgroundColor =
+    "hsl(224, 36%, 15%)";
+  document.querySelector("#input-number").style.color = "white";
+  document.querySelector("#input-number").style.backgroundColor =
+    "hsl(224, 36%, 15%)";
+  document.querySelector(".numpad-div").style.backgroundColor =
+    "hsl(223, 31%, 20%)";
+  for (var i = 0; i < keyBackgroundOne.length; i++) {
+    console.log(i);
+    keyBackgroundOne[i].style.backgroundColor = "hsl(30, 25%, 89%)";
+    keyBackgroundOne[i].style.color = "hsl(221, 14%, 31%)";
+    keyBackgroundOne[i].style.boxShadow = "0px 2px 1px 1px hsl(28, 16%, 65%)";
+  }
+
+  keyBackgroundTwo.style.backgroundColor = "hsl(225, 21%, 49%)";
+  keyBackgroundTwo.style.boxShadow = "0px 2px 1px 1px hsl(224, 28%, 35%)";
+  keyBackgroundThree.style.backgroundColor = "hsl(6, 63%, 50%)";
+  keyBackgroundThree.style.boxShadow = "0px 2px 1px 1px hsl(6, 70%, 34%)";
+  keyBackgroundTwo.style.color = "hsl(221, 14%, 31%)";
+  keyBackgroundThree.style.color = "hsl(221, 14%, 31%)";
+  document.querySelector(".reset").style.backgroundColor = "hsl(225, 21%, 49%)";
+  document.querySelector(".reset").style.boxShadow =
+    "0px 2px 1px 1px hsl(224, 28%, 35%)";
+}
+
+document.querySelector(".switch-icon").addEventListener("click", function () {
+  if (sliderEl.value === "1") {
+    document.body.style.color = "white";
+    document.documentElement.style.backgroundColor = "hsl(222, 26%, 31%)";
+    document.querySelector(".switch-icon").style.backgroundColor =
+      "hsl(223, 31%, 20%)";
+    sliderEl.style.setProperty("--sliderColor", "hsl(6, 100%, 50%)");
+    document.querySelector(".input-div").style.backgroundColor =
+      "hsl(224, 36%, 15%)";
+    document.querySelector("#input-number").style.color = "white";
+    document.querySelector("#input-number").style.backgroundColor =
+      "hsl(224, 36%, 15%)";
+    document.querySelector(".numpad-div").style.backgroundColor =
+      "hsl(223, 31%, 20%)";
+    for (var i = 0; i < keyBackgroundOne.length; i++) {
+      console.log(i);
+      keyBackgroundOne[i].style.backgroundColor = "hsl(30, 25%, 89%)";
+      keyBackgroundOne[i].style.color = "hsl(221, 14%, 31%)";
+      keyBackgroundOne[i].style.boxShadow = "0px 2px 1px 1px hsl(28, 16%, 65%)";
+    }
+
+    keyBackgroundTwo.style.backgroundColor = "hsl(225, 21%, 49%)";
+    keyBackgroundTwo.style.boxShadow = "0px 2px 1px 1px hsl(224, 28%, 35%)";
+    keyBackgroundThree.style.backgroundColor = "hsl(6, 63%, 50%)";
+    keyBackgroundThree.style.boxShadow = "0px 2px 1px 1px hsl(6, 70%, 34%)";
+    keyBackgroundTwo.style.color = "hsl(221, 14%, 31%)";
+    keyBackgroundThree.style.color = "hsl(221, 14%, 31%)";
+    document.querySelector(".reset").style.backgroundColor =
+      "hsl(225, 21%, 49%)";
+    document.querySelector(".reset").style.boxShadow =
+      "0px 2px 1px 1px hsl(224, 28%, 35%)";
+  }
+  if (sliderEl.value === "2") {
+    document.body.style.color = "hsl(60, 10%, 19%)";
+    document.documentElement.style.backgroundColor = "hsl(0, 0%, 90%)";
+    document.querySelector(".switch-icon").style.backgroundColor =
+      "hsl(0, 5%, 81%)";
+    sliderEl.style.setProperty("--sliderColor", "hsl(25, 98%, 40%)");
+    document.querySelector(".input-div").style.backgroundColor =
+      "hsl(0, 0%, 93%)";
+    document.querySelector("#input-number").style.color = "black";
+    document.querySelector("#input-number").style.backgroundColor =
+      "hsl(0, 0%, 93%)";
+    document.querySelector(".numpad-div").style.backgroundColor =
+      "hsl(0, 5%, 81%)";
+
+    for (var i = 0; i < keyBackgroundOne.length; i++) {
+      console.log(i);
+      keyBackgroundOne[i].style.backgroundColor = "hsl(45, 7%, 89%)";
+      keyBackgroundOne[i].style.boxShadow = "0px 2px 1px 1px hsl(28, 16%, 65%)";
+      keyBackgroundOne[i].style.color = "hsl(60, 10%, 19%)";
+    }
+    keyBackgroundTwo.style.backgroundColor = "hsl(185, 42%, 37%)";
+    keyBackgroundTwo.style.boxShadow = "0px 2px 1px 1px hsl(185, 58%, 25%)";
+    keyBackgroundThree.style.backgroundColor = "hsl(25, 98%, 40%)";
+    keyBackgroundThree.style.boxShadow = "0px 2px 1px 1px hsl(25, 99%, 27%)";
+
+    keyBackgroundTwo.style.color = "hsl(60, 10%, 19%)";
+    keyBackgroundThree.style.color = "hsl(60, 10%, 19%)";
+    document.querySelector(".reset").style.backgroundColor =
+      "hsl(185, 42%, 37%)";
+    document.querySelector(".reset").style.boxShadow =
+      "0px 2px 1px 1px hsl(185, 58%, 25%)";
+  }
+  if (sliderEl.value === "3") {
+    document.body.style.color = "hsl(52, 100%, 62%)";
+    document.documentElement.style.backgroundColor = "hsl(268, 75%, 9%)";
+    document.querySelector(".switch-icon").style.backgroundColor =
+      "hsl(268, 71%, 12%)";
+    sliderEl.style.setProperty("--sliderColor", "hsl(176, 100%, 44%)");
+    document.querySelector(".input-div").style.backgroundColor =
+      "hsl(268, 71%, 12%)";
+    document.querySelector("#input-number").style.color = "hsl(52, 100%, 62%)";
+    document.querySelector("#input-number").style.backgroundColor =
+      "hsl(268, 71%, 12%)";
+    document.querySelector(".numpad-div").style.backgroundColor =
+      "hsl(268, 71%, 12%)";
+    for (var i = 0; i < keyBackgroundOne.length; i++) {
+      console.log(i);
+      keyBackgroundOne[i].style.backgroundColor = "hsl(268, 47%, 21%)";
+      keyBackgroundOne[i].style.boxShadow =
+        "0px 2px 1px 1px  hsl(290, 70%, 36%)";
+      keyBackgroundOne[i].style.color = "hsl(52, 100%, 62%)";
+    }
+    keyBackgroundTwo.style.backgroundColor = "hsl(281, 89%, 26%)";
+    keyBackgroundTwo.style.boxShadow = "0px 2px 1px 1px  hsl(285, 91%, 52%)";
+    keyBackgroundThree.style.backgroundColor = "hsl(176, 100%, 44%)";
+    keyBackgroundThree.style.boxShadow = "0px 2px 1px 1px  hsl(177, 92%, 70%)";
+
+    keyBackgroundTwo.style.color = "hsl(221, 14%, 31%)";
+    keyBackgroundThree.style.color = "hsl(221, 14%, 31%)";
+    document.querySelector(".reset").style.backgroundColor =
+      "hsl(281, 89%, 26%)";
+    document.querySelector(".reset").style.boxShadow =
+      "0px 2px 1px 1px  hsl(285, 91%, 52%)";
+  }
+});
