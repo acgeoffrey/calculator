@@ -13,8 +13,8 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
 
 ### Screenshot
 
-![](images/desktop-view.png)
-![](images/mobile-view.png)
+![Desktop View](images/desktop-view.png)
+![Mobile View](images/mobile-view.png)
 
 ### Links
 
