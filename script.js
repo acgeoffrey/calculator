@@ -254,15 +254,17 @@ document.querySelector(".reset").addEventListener("click", resetFunction);
 function delFunction() {
   if (isFirstNumber) {
     firstNumber = firstNumber.substring(0, firstNumber.length - 1);
-    display.value = parseFloat(firstNumber);
+    display.value = firstNumber;
   } else {
     secondNumber = secondNumber.substring(0, secondNumber.length - 1);
-    display.value = parseFloat(secondNumber);
+    display.value = secondNumber;
   }
-  displayTextEl.innerText = displayText.substring(0, displayText.length - 1);
+  displayText = displayText.substring(0, displayText.length - 1);
+  displayTextEl.innerText = displayText;
 }
 document.querySelector(".del").addEventListener("click", delFunction);
 
+// KEYBOARD
 window.onkeydown = function (event) {
   let key = event.key;
   console.log(key);
