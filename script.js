@@ -9,6 +9,8 @@ const display = document.querySelector("#input-number");
 const displayTextEl = document.querySelector(".display-text");
 let displayText = " ";
 let isResultBtn = false;
+let isOperator = false;
+let isResult = false;
 function tempResultFunction() {
   tempResult = eval(firstNumber + " " + operator + " " + secondNumber);
   console.log("FirstNumber " + firstNumber, "SecondNumber " + secondNumber);
@@ -16,9 +18,16 @@ function tempResultFunction() {
   secondNumber = "";
   console.log("FirstNumber " + firstNumber, "SecondNumber " + secondNumber);
 }
+function isResultCheckFunc() {
+  if (isResult) {
+    resetFunction();
+    isResult = false;
+  }
+}
 
 // NUMBERS
 function one() {
+  isResultCheckFunc();
   if (isFirstNumber) {
     firstNumber = firstNumber + "1";
     display.value = parseFloat(firstNumber);
@@ -28,10 +37,12 @@ function one() {
   }
   displayText = displayText + " " + "1";
   displayTextEl.innerText = displayText;
+  isOperator = false;
 }
 document.querySelector(".one").addEventListener("click", one);
 
 function two() {
+  isResultCheckFunc();
   if (isFirstNumber) {
     firstNumber = firstNumber + "2";
     display.value = parseFloat(firstNumber);
@@ -41,10 +52,12 @@ function two() {
   }
   displayText = displayText + " " + "2";
   displayTextEl.innerText = displayText;
+  isOperator = false;
 }
 document.querySelector(".two").addEventListener("click", two);
 
 function three() {
+  isResultCheckFunc();
   if (isFirstNumber) {
     firstNumber = firstNumber + "3";
     display.value = parseFloat(firstNumber);
@@ -54,10 +67,12 @@ function three() {
   }
   displayText = displayText + " " + "3";
   displayTextEl.innerText = displayText;
+  isOperator = false;
 }
 document.querySelector(".three").addEventListener("click", three);
 
 function four() {
+  isResultCheckFunc();
   if (isFirstNumber) {
     firstNumber = firstNumber + "4";
     display.value = parseFloat(firstNumber);
@@ -67,10 +82,12 @@ function four() {
   }
   displayText = displayText + " " + "4";
   displayTextEl.innerText = displayText;
+  isOperator = false;
 }
 document.querySelector(".four").addEventListener("click", four);
 
 function five() {
+  isResultCheckFunc();
   if (isFirstNumber) {
     firstNumber = firstNumber + "5";
     display.value = parseFloat(firstNumber);
@@ -80,10 +97,12 @@ function five() {
   }
   displayText = displayText + " " + "5";
   displayTextEl.innerText = displayText;
+  isOperator = false;
 }
 document.querySelector(".five").addEventListener("click", five);
 
 function six() {
+  isResultCheckFunc();
   if (isFirstNumber) {
     firstNumber = firstNumber + "6";
     display.value = parseFloat(firstNumber);
@@ -93,10 +112,12 @@ function six() {
   }
   displayText = displayText + " " + "6";
   displayTextEl.innerText = displayText;
+  isOperator = false;
 }
 document.querySelector(".six").addEventListener("click", six);
 
 function seven() {
+  isResultCheckFunc();
   if (isFirstNumber) {
     firstNumber = firstNumber + "7";
     display.value = parseFloat(firstNumber);
@@ -106,10 +127,12 @@ function seven() {
   }
   displayText = displayText + " " + "7";
   displayTextEl.innerText = displayText;
+  isOperator = false;
 }
 document.querySelector(".seven").addEventListener("click", seven);
 
 function eight() {
+  isResultCheckFunc();
   if (isFirstNumber) {
     firstNumber = firstNumber + "8";
     display.value = parseFloat(firstNumber);
@@ -119,10 +142,12 @@ function eight() {
   }
   displayText = displayText + " " + "8";
   displayTextEl.innerText = displayText;
+  isOperator = false;
 }
 document.querySelector(".eight").addEventListener("click", eight);
 
 function nine() {
+  isResultCheckFunc();
   if (isFirstNumber) {
     firstNumber = firstNumber + "9";
     display.value = parseFloat(firstNumber);
@@ -132,10 +157,12 @@ function nine() {
   }
   displayText = displayText + " " + "9";
   displayTextEl.innerText = displayText;
+  isOperator = false;
 }
 document.querySelector(".nine").addEventListener("click", nine);
 
 function zero() {
+  isResultCheckFunc();
   if (isFirstNumber) {
     firstNumber = firstNumber + "0";
     display.value = parseFloat(firstNumber);
@@ -145,6 +172,7 @@ function zero() {
   }
   displayText = displayText + " " + "0";
   displayTextEl.innerText = displayText;
+  isOperator = false;
 }
 document.querySelector(".zero").addEventListener("click", zero);
 
@@ -156,6 +184,8 @@ function add() {
   operator = "+";
   isFirstNumber = false;
   isResultBtn = false;
+  isOperator = true;
+  isResult = false;
 
   displayText = displayText + " " + operator;
   displayTextEl.innerText = displayText;
@@ -169,6 +199,8 @@ function subtract() {
   operator = "-";
   isFirstNumber = false;
   isResultBtn = false;
+  isOperator = true;
+  isResult = false;
 
   displayText = displayText + " " + operator;
   displayTextEl.innerText = displayText;
@@ -182,6 +214,8 @@ function multiply() {
   operator = "*";
   isFirstNumber = false;
   isResultBtn = false;
+  isOperator = true;
+  isResult = false;
 
   displayText = displayText + " " + operator;
   displayTextEl.innerText = displayText;
@@ -195,6 +229,8 @@ function divide() {
   operator = "/";
   isFirstNumber = false;
   isResultBtn = false;
+  isOperator = true;
+  isResult = false;
 
   displayText = displayText + " " + operator;
   displayTextEl.innerText = displayText;
@@ -235,6 +271,7 @@ function resultFunction() {
   displayText = result;
   isResultBtn = true;
   displayTextEl.innerText = " ";
+  isResult = true;
 }
 document.querySelector(".result").addEventListener("click", resultFunction);
 
@@ -255,6 +292,8 @@ function delFunction() {
   if (isFirstNumber) {
     firstNumber = firstNumber.substring(0, firstNumber.length - 1);
     display.value = firstNumber;
+  } else if (isOperator) {
+    operator = "";
   } else {
     secondNumber = secondNumber.substring(0, secondNumber.length - 1);
     display.value = secondNumber;
