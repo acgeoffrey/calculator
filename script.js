@@ -388,7 +388,7 @@ if (sliderEl.value === "1") {
     "0px 2px 1px 1px hsl(224, 28%, 35%)";
 }
 
-document.querySelector(".switch-icon").addEventListener("click", function () {
+function theme() {
   if (sliderEl.value === "1") {
     document.body.style.color = "white";
     document.documentElement.style.backgroundColor = "hsl(222, 26%, 31%)";
@@ -484,4 +484,6 @@ document.querySelector(".switch-icon").addEventListener("click", function () {
     document.querySelector(".reset").style.boxShadow =
       "0px 2px 1px 1px  hsl(285, 91%, 52%)";
   }
-});
+}
+document.querySelector(".switch-icon").addEventListener("click", theme);
+document.querySelector(".switch-icon").addEventListener("touchend", theme);
