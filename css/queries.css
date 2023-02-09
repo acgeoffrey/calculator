@@ -1,0 +1,42 @@
+/******************************/
+/* BELOW 1344px (Smaller desktops) */
+/******************************/
+@media (max-width: 84em) {
+  body {
+    width: 40%;
+  }
+}
+
+/******************************/
+/* BELOW 992px (Tablets) */
+/******************************/
+
+@media (max-width: 62em) {
+  body {
+    width: 50%;
+  }
+}
+
+/******************************/
+/* BELOW 752px (Small Tablets) */
+/******************************/
+
+@media (max-width: 47em) {
+  html {
+    font-size: 50%;
+  }
+
+  body {
+    width: 60%;
+  }
+}
+
+/******************************/
+/* BELOW 564px (Mobile Phones) */
+/******************************/
+
+@media (max-width: 36em) {
+  body {
+    width: 90%;
+  }
+}
